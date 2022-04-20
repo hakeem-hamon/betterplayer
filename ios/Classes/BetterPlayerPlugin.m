@@ -399,11 +399,11 @@ bool _remoteCommandsInitialized = false;
             [player setTrackParameters:width: height : bitrate];
             result(nil);
         } else if ([@"enablePictureInPicture" isEqualToString:call.method]){
-//             double left = [argsMap[@"left"] doubleValue];
-//             double top = [argsMap[@"top"] doubleValue];
-//             double width = [argsMap[@"width"] doubleValue];
-//             double height = [argsMap[@"height"] doubleValue];
-//             [player enablePictureInPicture:CGRectMake(left, top, width, height)];
+            double left = [argsMap[@"left"] doubleValue];
+            double top = [argsMap[@"top"] doubleValue];
+            double width = [argsMap[@"width"] doubleValue];
+            double height = [argsMap[@"height"] doubleValue];
+            [player enablePictureInPicture:CGRectMake(left, top, width, height)];
         } else if ([@"isPictureInPictureSupported" isEqualToString:call.method]){
             if (@available(iOS 9.0, *)){
                 if ([AVPictureInPictureController isPictureInPictureSupported]){
